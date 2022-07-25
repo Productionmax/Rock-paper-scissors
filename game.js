@@ -29,11 +29,19 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i=0;i<5; i++){
         const playerSelection = prompt("What's your choice?").toLowerCase();
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-
+        result = playRound(playerSelection,computerSelection);
+        console.log(result);
+        if (result === "You Win! Paper beats Rock" || result === "You Win! Scissor beats Rock"||result === "You win! Rock beats Scissor" || result === "You Win! Scissor beats Paper" ){
+            playerScore++; 
+        } else {computerScore++;}
     }
+    console.log(playerScore);
+    console.log(computerScore);
 }
 console.log(game());
+
