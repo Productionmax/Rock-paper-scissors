@@ -28,8 +28,12 @@ function playRound(playerSelection, computerSelection){
     }  else {return "You need to choose either Rock, Paper, Scissors!";}
 }
 
-const playerSelection.toLowerCase() = "rock";
-const computerSelection = getComputerChoice();
-
-
-
+function game(){
+    for (let i=0;i<5; i++){
+        const playerSelection = "rock";
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection,computerSelection));
+        
+    }
+}
+console.log(game());
