@@ -30,10 +30,10 @@ function playRound(playerSelection, computerSelection){
 
 function game(){
     for (let i=0;i<5; i++){
-        const playerSelection = "rock";
+        const playerSelection = prompt("What's your choice?").toLowerCase();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection,computerSelection));
-        
+
     }
 }
 console.log(game());
