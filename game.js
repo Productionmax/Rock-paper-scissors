@@ -5,10 +5,10 @@ function getComputerChoice(){
    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
    return computerChoice;
 }
-
+// A function for 1 round of the game 
 function playRound(playerSelection, computerSelection){
     if (playerSelection===computerSelection){
-        return 'It\'s a tie!You both chose ${playerSelection}';
+        return 'It\'s a tie! You both chose ${playerSelection}';
     }  else if (playerSelection === "rock" && computerSelection === "paper"){
         return "You Lose! Paper beats Rock";
     }  else if (playerSelection === "paper" && computerSelection === "rock"){
@@ -27,7 +27,7 @@ function playRound(playerSelection, computerSelection){
         return "You Lose! Scissor beats Paper";
     }  else {return "You need to choose either Rock, Paper, Scissors!";}
 }
-
+// A function that counts the score and plays the game for 5 rounds 
 function game(){
     let playerScore = 0;
     let computerScore = 0;
