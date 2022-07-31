@@ -27,6 +27,19 @@ function playRound(playerSelection, computerSelection){
         return "You Lose! Scissor beats Paper";
     }  else {return "You need to choose either Rock, Paper, Scissors!";}
 }
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissor = document.querySelector('#scissor');
+
+rock.addEventListener('click', function(){
+    playRound('rock',getComputerChoice());   
+});
+paper.addEventListener('click',function(){
+    playRound('paper',getComputerChoice());
+});
+scissor.addEventListener('click',function(){
+    playRound('scissor',getComputerChoice());
+});
 // A function that counts the score and plays the game for 5 rounds 
 // function game(){
 //     let playerScore = 0;
@@ -45,6 +58,3 @@ function playRound(playerSelection, computerSelection){
 // }
 //console.log(game());
 
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissor = document.querySelector('#scissor');
