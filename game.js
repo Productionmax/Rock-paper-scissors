@@ -8,7 +8,7 @@ function getComputerChoice(){
 // A function for 1 round of the game 
 function playRound(playerSelection, computerSelection){
     if (playerSelection===computerSelection){
-        return 'It\'s a tie! You both chose ${playerSelection}.';
+        return `It's a tie! You both chose ${playerSelection}.`;
     }  else if (playerSelection === "rock" && computerSelection === "paper"){
         return "You Lose! Paper beats Rock";
     }  else if (playerSelection === "paper" && computerSelection === "rock"){
