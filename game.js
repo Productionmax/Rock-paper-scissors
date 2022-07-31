@@ -28,20 +28,23 @@ function playRound(playerSelection, computerSelection){
     }  else {return "You need to choose either Rock, Paper, Scissors!";}
 }
 // A function that counts the score and plays the game for 5 rounds 
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i=0;i<5; i++){
-        const playerSelection = prompt("What's your choice?").toLowerCase();
-        const computerSelection = getComputerChoice();
-        result = playRound(playerSelection,computerSelection);
-        console.log(result);
-        if (result === "You Win! Paper beats Rock" || result === "You Win! Scissor beats Rock"||result === "You win! Rock beats Scissor" || result === "You Win! Scissor beats Paper" ){
-            playerScore++; 
-        } else {computerScore++;}
-    }
-    console.log(playerScore);
-    console.log(computerScore);
-}
-console.log(game());
+// function game(){
+//     let playerScore = 0;
+//     let computerScore = 0;
+//     for (let i=0;i<5; i++){
+//         const playerSelection = prompt("What's your choice?").toLowerCase();
+//         const computerSelection = getComputerChoice();
+//         result = playRound(playerSelection,computerSelection);
+//         console.log(result);
+//         if (result === "You Win! Paper beats Rock" || result === "You Win! Scissor beats Rock"||result === "You win! Rock beats Scissor" || result === "You Win! Scissor beats Paper" ){
+//             playerScore++; 
+//         } else {computerScore++;}
+//     }
+//     console.log(playerScore);
+//     console.log(computerScore);
+// }
+//console.log(game());
 
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissor = document.querySelector('#scissor');
