@@ -1,5 +1,6 @@
 body {
     background-color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
 }
 .selections{
     display:flex;
@@ -22,6 +23,7 @@ button:hover{
     grid-template-columns: repeat(2,1fr);
     justify-items: center;
     align-items:center;
+    font-size:1.5rem;
 }
 .result-score{
     margin-left: .1rem;
@@ -39,4 +41,5 @@ button:hover{
 .condition{
     display:flex;
     justify-content: center;
+    font-size:2rem;
 }

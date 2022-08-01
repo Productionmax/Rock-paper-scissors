@@ -48,21 +48,25 @@ function playRound(playerSelection, computerSelection){
     }  else {return "You need to choose either Rock, Paper, Scissors!";}
     // addSelectionResult (computerSelection,computerWinner);
     // addSelectionResult (playerSelection,yourWinner);
-    if (yourWinner !== '') {
-        incrementScore(yourScoreSpan);
-        condition.innerText = yourWinner;
-        condition.style.color = 'green';
-}
-    if (computerWinner !== ''){
-        incrementScore(computerScoreSpan);
-        condition.innerText = computerWinner;
-        condition.style.color = 'red';
-    }
+     if (yourScoreSpan.innerText !== "WINNER!!!" && computerScoreSpan.innerText !=="WINNER!!!"){
+          if (yourWinner !== '') {
+               incrementScore(yourScoreSpan);
+               condition.innerText = yourWinner;
+               condition.style.color = 'green';
+          }
+          if (computerWinner !== ''){
+               incrementScore(computerScoreSpan);
+               condition.innerText = computerWinner;
+               condition.style.color = 'red';
+          }
+     }else {yourScoreSpan.innerText=0;
+     computerScoreSpan.innerText=0;}
 }
 // Increments the score by 1 by switching the string to a number and adding it by 1 
 function incrementScore (scoreSpan){
      if (scoreSpan.innerText<5){
      scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1;
-     } else {scoreSpan.innerText="WINNER!!!"};
+     } else {scoreSpan.innerText="WINNER!!!";
+     scoreSpan.style.color = 'green';};
      
 }
