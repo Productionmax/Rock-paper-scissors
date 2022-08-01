@@ -28,6 +28,8 @@ function playRound(playerSelection, computerSelection){
     let yourWinner = '';
     console.log(playerSelection);
     if (playerSelection===computerSelection){
+        condition.innerText = `It's a tie! You both chose ${playerSelection}.`;
+        condition.style.color = 'black';
         return `It's a tie! You both chose ${playerSelection}.`;
     }  else if (playerSelection === "rock" && computerSelection === "paper"){
          computerWinner = "You Lose! Paper beats Rock";
@@ -60,7 +62,9 @@ function playRound(playerSelection, computerSelection){
                condition.style.color = 'red';
           }
      }else {yourScoreSpan.innerText=0;
-     computerScoreSpan.innerText=0;}
+          yourScoreSpan.style.color='#333';
+          computerScoreSpan.innerText=0;
+          computerScoreSpan.style.color='#333'}
 }
 // Increments the score by 1 by switching the string to a number and adding it by 1 
 function incrementScore (scoreSpan){
