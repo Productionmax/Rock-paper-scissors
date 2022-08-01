@@ -64,7 +64,7 @@ function playRound(playerSelection, computerSelection){
      }else {yourScoreSpan.innerText=0;
           yourScoreSpan.style.color='#333';
           computerScoreSpan.innerText=0;
-          computerScoreSpan.style.color='#333'}
+          computerScoreSpan.style.color='#333';}
 }
 // Increments the score by 1 by switching the string to a number and adding it by 1 
 function incrementScore (scoreSpan){
