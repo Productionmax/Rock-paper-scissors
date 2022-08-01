@@ -2,7 +2,7 @@ const selectionButtons = document.querySelectorAll('[data-selection]');
 const finalColumn = document.querySelector('[data-final-column]');
 const computerScoreSpan = document.querySelector('#Cscore');
 const yourScoreSpan = document.querySelector('#Yscore')
-
+const condition = document.querySelector('.condition');
 
 
 // For each of the buttons a selectionbutton function goes through by putting the dataselection name to selectioname and inputting it to the playround function
@@ -50,11 +50,19 @@ function playRound(playerSelection, computerSelection){
     // addSelectionResult (playerSelection,yourWinner);
     if (yourWinner !== '') {
         incrementScore(yourScoreSpan);
+        condition.innerText = yourWinner;
+        condition.style.color = 'green';
 }
     if (computerWinner !== ''){
         incrementScore(computerScoreSpan);
+        condition.innerText = computerWinner;
+        condition.style.color = 'red';
     }
 }
+// Increments the score by 1 by switching the string to a number and adding it by 1 
 function incrementScore (scoreSpan){
-    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+     if (scoreSpan.innerText<5){
+     scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1;
+     } else {scoreSpan.innerText="WINNER!!!"};
+     
 }
